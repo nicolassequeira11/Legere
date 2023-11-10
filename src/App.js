@@ -7,8 +7,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const App = () => {
   return(
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/login" element={<Login />} />
+      <Route path="/Legere" element={<Home />} />
+      <Route path="/Login" element={<Login />} />
     </Routes>
   )
 }

@@ -8,7 +8,7 @@ const Navbar = () => {
     <header>
       <nav className="navbar-container">
         <div className="navbar-container-logo">
-          <Link to="/" className="navbar-logo">
+          <Link to="/Legere" className="navbar-logo">
             <img src="/logo-white.png" className="mx-auto" alt="Logo" />
           </Link>
         </div>
