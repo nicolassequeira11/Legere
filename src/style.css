@@ -1,0 +1,115 @@
+:root{
+  --color1: #2e2b74;
+  --color2: #ffffff;
+  --color3: #a8a6cb;
+  --color4: #ffb500;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
+/* COMPONENTS */
+
+/* buttons */
+
+.btn-orange{
+  background-color: var(--color4);
+  border: none;
+  padding: 10px 30px;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: auto;
+}
+
+.btn-violet{
+  background-color: var(--color3);
+  border: none;
+  padding: 10px 30px;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: auto;
+}
+
+/* NAVBAR */
+
+.navbar-container {
+  background-color: var(--color1);
+  justify-content: space-between;
+  display: flex;
+  padding: 0 20px;
+  height: 90px;
+}
+
+.navbar-container-logo{
+  width: 20%;
+  margin: 10px 0;
+  display: flex;
+}
+
+.navbar-logo{
+  width: 100%;
+  display: flex;
+  object-fit: contain;
+}
+
+.navbar-container-links{
+  width: 20%;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-link{
+  text-decoration: none;
+  color: var(--color2);
+  margin: auto 10px;
+  font-size: 1.4rem;
+}
+
+.navbar-cart{
+  color: var(--color2);
+  margin: auto 10px;
+  font-size: 1.6rem;
+}
+
+.navbar-block{
+  display: block;
+  height: 30px;
+  background-color: var(--color3);
+}
+
+/* LOGIN */
+
+.login-container{
+  position: relative;
+  margin: auto;
+  height: 100vh;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container-logo{
+  display: flex;
+  margin: 0 0 30px 0;
+}
+
+.login-container-form{
+  height: 60vh;
+  margin: 0 auto;
+  border: 1px solid #a9a9a950;
+  border-radius: 20px;
+  padding: 20px 25px;
+  text-align: center;
+}
+
+.login-form{
+  display: flex;
+  height: 90%;
+  flex-direction: column;
+}
+
