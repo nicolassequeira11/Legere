@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Legere/static/css/main.0a9af66f.css",
+    "main.js": "/Legere/static/js/main.5f47b97c.js",
+    "static/media/bootstrap-icons.woff?": "/Legere/static/media/bootstrap-icons.449ad8adf6ae0424b7ed.woff",
+    "static/media/bootstrap-icons.woff2?": "/Legere/static/media/bootstrap-icons.dea24bf5a7646d8b84e7.woff2",
+    "index.html": "/Legere/index.html",
+    "main.0a9af66f.css.map": "/Legere/static/css/main.0a9af66f.css.map",
+    "main.5f47b97c.js.map": "/Legere/static/js/main.5f47b97c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0a9af66f.css",
+    "static/js/main.5f47b97c.js"
+  ]
+}

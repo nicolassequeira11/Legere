@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useFormik } from "formik";
 import Style from "./style.css"
 import Button from "./components/Buttons";
+import { Logo } from "./components/Logo";
 
 const validate = (values) => {
   const errors = {};
@@ -30,7 +31,7 @@ const Login = () => {
   return(
     <div className="login-container col-md-8 col-lg-6 col-xl-4">
       <Link to="/Legere" className="login-container-logo">
-        <img src="./public/logo.png" className="col-5 d-flex m-auto" />
+        <Logo class="col-5 d-flex m-auto" />
       </Link>
       <div className="login-container-form col-md-10">
         <h3>Iniciar sesión</h3>
