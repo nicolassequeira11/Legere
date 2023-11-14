@@ -133,6 +133,26 @@
   color: var(--color1);
 }
 
+.navbar-listGenre{
+  background-color: var(--color2);
+  margin: 10px 20px;
+  width: fit-content;
+  border-radius: 10px;
+  position: absolute;
+}
+
+.navbar-listGenre-item{
+  font-weight: 400;
+  padding: 5px 30px;
+  cursor: pointer;
+  margin: 10px auto;
+}
+
+.navbar-listGenre-item:hover{
+  background-color: var(--color3);
+  color: var(--color2);
+}
+
 /* card */
 
 .card-container{

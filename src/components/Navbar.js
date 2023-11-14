@@ -1,11 +1,27 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
 import Style from "../style.css";
 import { LogoWhite } from "./Logo";
 
 const Navbar = () => {
   const getUsername = localStorage.getItem("username");
+  const navigate = useNavigate();
+  const [showGenres, setShowGenres] = useState(false);
+
+  const toggleGenres = () =>{
+    setShowGenres(!showGenres);
+  }
+
+  const reload = () => {
+    window.location.reload();
+  }
+
+  const eventClick = (genre) => {
+    localStorage.setItem("genre", genre);
+    navigate("/Genre");
+    reload();
+  }
 
   return( 
     <header>
@@ -42,10 +58,23 @@ const Navbar = () => {
       </nav>
       <div className="navbar-block">
         <div className="ms-5 py-2">
-          <Link className="navbar-sublink">
+          <Link className="navbar-sublink" onClick={toggleGenres}>
             Géneros
-            <i class="bi bi-chevron-down text-white ms-2 my-auto"></i>
+            <i className={`bi bi-chevron-down text-white ms-2 my-auto ${showGenres ? 'rotate-icon' : ''}`}></i>
           </Link>
+
+          {showGenres && (
+            <div className="navbar-listGenre">
+              <p className="navbar-listGenre-item" onClick={()=> eventClick("Romance")}>Romance</p>
+              <p className="navbar-listGenre-item" onClick={()=> eventClick("Terror")}>Terror</p>
+              <p className="navbar-listGenre-item" onClick={()=> eventClick("Ciencia")}>Ciencia</p>
+              <p className="navbar-listGenre-item" onClick={()=> eventClick("Fantasía")}>Fantasía</p>
+              <p className="navbar-listGenre-item" onClick={()=> eventClick("Autoayuda")}>Autoayuda</p>
+              <p className="navbar-listGenre-item" onClick={()=> eventClick("Poesía")}>Poesía</p>
+              <p className="navbar-listGenre-item" onClick={()=> eventClick("Cocina y recetas")}>Cocina y recetas</p>
+            </div>
+          )}
+
           <Link className="navbar-sublink">Ofertas</Link>
           <Link className="navbar-sublink">Los más vendidos</Link>
           <Link className="navbar-sublink">LeReads</Link>
