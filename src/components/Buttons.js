@@ -1,11 +1,13 @@
 import React from "react";
 import Style from "../style.css";
 
-const Button = ( { children, color } ) => {
+const Button = ( { children, color, col, onClick } ) => {
   return(
     <button 
       type="sumbit" 
-      className={`btn-${color} col-9`}>
+      className={`btn-${color} ${col} d-flex justify-content-center`}
+      onClick={onClick}
+    >
       {children}
     </button>
   )

@@ -23,7 +23,7 @@
   padding: 10px 30px;
   border-radius: 15px;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: auto;
 }
 
@@ -33,11 +33,11 @@
   padding: 10px 30px;
   border-radius: 15px;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: auto;
 }
 
-/* NAVBAR */
+/* navbar */
 
 .navbar-container {
   background-color: var(--color1);
@@ -67,12 +67,38 @@
 }
 
 .navbar-inputSearch{
-  background-color: var(--color5) !important;
+  background-color: var(--color5);
+  width: 100%;
+  border: none;
+  margin: auto;
+  border-radius: 10px;
+  padding: 9px 10px;
+}
+
+.navbar-inputSearch:focus{
+  outline: none;
+}
+
+.navbar-inputSearch:focus + .navbar-inputSearch-icon{
+  opacity: 0;
+}
+
+.navbar-inputSearch-icon{
+  color: var(--color1);
+  position: relative;
+  display: flex;
+  height: fit-content;
+  width: fit-content;
+  top: 10px;
+  right: 30px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .navbar-container-links{
   width: 20%;
   display: flex;
+  margin: auto;
   justify-content: center;
 }
 
@@ -85,7 +111,8 @@
 
 .navbar-cart{
   color: var(--color2);
-  margin: auto 10px;
+  margin: auto;
+  display: flex;
   font-size: 1.6rem;
 }
 
@@ -104,6 +131,25 @@
 
 .navbar-sublink:hover{
   color: var(--color1);
+}
+
+/* card */
+
+.card-container{
+}
+
+/* title */
+
+.title{
+}
+
+.title::after{
+  content: "";
+  margin: 10px 0 0 0;
+  height: 6px;
+  display: flex;
+  width: 53vw;
+  background-color: var(--color4);
 }
 
 /* LOGIN */

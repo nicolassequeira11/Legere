@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, {useEffect, useState} from "react";
+import { useNavigate, Link } from "react-router-dom";
 import { useFormik } from "formik";
 import Style from "./style.css"
 import Button from "./components/Buttons";
@@ -20,18 +20,28 @@ const validate = (values) => {
 }
 
 const Login = () => {
+  const [redirectToHome, setRedirectToHome] = useState(false);
+  const navigate = useNavigate();
+
   const formik = useFormik({
     initialValues: {
       username: "",
       password: "",
     },
-    onSubmit: values => console.log(values)
+    onSubmit: values => {
+      localStorage.setItem("username", values.username);
+      setRedirectToHome(true);
+    }
   });
+
+  if (redirectToHome) {
+    navigate("/Legere");
+  }
 
   return(
     <div className="login-container col-md-8 col-lg-6 col-xl-4">
       <Link to="/Legere" className="login-container-logo">
-        <Logo class="col-5 d-flex m-auto" />
+        <Logo className="col-5 d-flex m-auto" />
       </Link>
       <div className="login-container-form col-md-10">
         <h3>Iniciar sesión</h3>
@@ -57,14 +67,14 @@ const Login = () => {
             className="text-decoration-none text-dark">
               ¿Olvidaste tu contraseña?
           </a>
-          <Button color="orange">Iniciar sesión</Button>
+          <Button color="orange" col="col-9">Iniciar sesión</Button>
 
           <a 
             href="#" 
             className="text-decoration-none text-dark">
               ¿Eres nuevo?
           </a>
-          <Button color="violet">Crear cuenta</Button>
+          <Button color="violet" col="col-9">Crear cuenta</Button>
         </form>
       </div>
     </div>

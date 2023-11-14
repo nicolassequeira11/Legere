@@ -5,13 +5,13 @@ import logoWhite from "../images/logo-white.png";
 
 const Logo = ( props ) => {
   return(
-    <img src={logo} className={props.class} />
+    <img src={logo} className={props.className} />
   )
 }
 
 const LogoWhite = ( props ) => {
   return(
-    <img src={logoWhite} className={props.class} />
+    <img src={logoWhite} className={props.className} />
   )
 }
 
