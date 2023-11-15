@@ -1,4 +1,5 @@
 import React, { useState, useEffect} from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Banner from "./images/banner-home.png";
 import Card from "./components/Card";
@@ -7,6 +8,12 @@ import Title from "./components/Title";
 const Home = () => {
   const [query, setQuery] = useState('');
   const [books, setBooks] = useState([]);
+  const navigate = useNavigate();
+
+  const clickDetails = (id) => {
+    localStorage.setItem("bookID", id);
+    navigate("/Details");
+  }
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,7 +42,7 @@ const Home = () => {
     <div>
       <Navbar />
       <div>
-        <img src={Banner} className="col-12" />
+        <img src={Banner} className="col-12" height={420}/>
       </div>
       <Title title="Libros populares ahora" />
       <div className="flex-wrap d-flex col-11 m-auto">
@@ -51,7 +58,8 @@ const Home = () => {
                 img={book.volumeInfo.imageLinks.thumbnail}
                 title={book.volumeInfo.title} 
                 author={book.volumeInfo.authors}
-                price={book.saleInfo.listPrice.amount + " " + book.saleInfo.listPrice.currencyCode} 
+                price={book.saleInfo.listPrice.amount + " " + book.saleInfo.listPrice.currencyCode}
+                onClick={()=> clickDetails(book.id)} 
               />
             )
           }

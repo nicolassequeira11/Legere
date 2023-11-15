@@ -8,7 +8,7 @@ const newText = (text, maxLength) => {
   return text;
 };
 
-const Card = ({ title: originalTitle, img, price, author }) => {
+const Card = ({ title: originalTitle, img, price, author, onClick }) => {
   const newTitle = newText(originalTitle, 26);
   
   return(
@@ -20,7 +20,7 @@ const Card = ({ title: originalTitle, img, price, author }) => {
         <h6 className="text-center col-8 mx-auto my-0">{newTitle}</h6>
         <p className="text-muted m-auto text-center"><small>{author}</small></p>
         <p className="text-center col-8 mx-auto">{price}</p>
-        <Button color="orange" col="col-7">Ver detalle</Button>
+        <Button color="orange" onClick={onClick} col="col-7">Ver detalle</Button>
       </div>
     </div>
   )

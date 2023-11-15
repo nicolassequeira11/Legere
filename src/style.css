@@ -4,6 +4,7 @@
   --color3: #a8a6cb;
   --color4: #ffb500;
   --color5: #d9d9d9;
+  --color6: #000000;
 }
 
 * {
@@ -11,11 +12,12 @@
   margin: 0;
   box-sizing: content-box;
   font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
 }
 
 /* COMPONENTS */
 
-/* buttons */
+/* --- buttons --- */
 
 .btn-orange{
   background-color: var(--color4);
@@ -37,7 +39,13 @@
   margin: auto;
 }
 
-/* navbar */
+/* --- navbar --- */
+
+header{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
 .navbar-container {
   background-color: var(--color1);
@@ -153,12 +161,66 @@
   color: var(--color2);
 }
 
-/* card */
+/* navbar mobile */
+
+.navbar-mobile-menu{
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.navbar-mobile-sublink{
+  text-decoration: none;
+  color: var(--color2);
+  margin: 10px auto;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.navbar-mobile-genresMenu{
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  position: relative;
+  color: var(--color4);
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+/* --- banner --- */
+
+.banner-container{
+  position: relative;
+}
+
+.banner-title{
+  position:absolute;
+  display: flex;
+  height: fit-content;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: var(--color1);
+  font-size: 4rem;
+  font-weight: 800;
+  margin: auto;
+  justify-content: center;
+}
+
+.banner-img{
+  
+}
+
+/* --- card --- */
 
 .card-container{
 }
 
-/* title */
+/* --- title --- */
 
 .title{
 }
@@ -203,3 +265,34 @@
   flex-direction: column;
 }
 
+/* DETAILS */
+
+.details-subtitle{
+  margin: 0 auto 20px;
+}
+
+.details-info-container{
+  margin: 30px auto;
+}
+
+.details-info-item{
+  margin: 10px auto;
+  color: var(--color1);
+  font-weight: 600;
+}
+
+.details-img-container{
+  height: fit-content;
+}
+
+.details-img{
+  display: flex;
+  height: 100%;
+  margin: auto;
+}
+
+.details-price{
+  margin: 15px auto;
+  text-align: center;
+  font-size: 1.2rem;
+}
