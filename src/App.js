@@ -6,6 +6,7 @@ import Register from "./Register";
 import Profile from "./Profile";
 import Genre from "./Genre";
 import Details from "./Details";
+import Error404 from "./Error404";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
       <Route path="/Login" element={<Login />} />
       <Route path="/Register" element={<Register />} />
       <Route path="/Profile" element={<Profile />} />
+      <Route path="/*" element={<Error404 />} />
     </Routes>
   )
 }

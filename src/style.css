@@ -326,3 +326,43 @@ header{
   text-align: center;
   font-size: 1.2rem;
 }
+
+/* ERROR 404 */
+
+.error404-container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.error404-title{
+  font-size: 3.5rem;
+  margin: 80px auto 0;
+  text-align: center;
+  font-weight: 600;
+  color: var(--color1);
+}
+
+.error404-content-container{
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.error404-info-container{
+  margin: 0 auto;
+  font-size: 1.4rem;
+}
+
+.error404-list-container{
+}
+
+.error404-img-container{
+  margin: auto;
+}
+
+.error404-img{
+
+}

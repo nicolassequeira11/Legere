@@ -54,7 +54,7 @@ const Navbar = () => {
         // Version Desktop (ancho > 1100)
         <nav className="navbar-container">
           <div className="navbar-container-logo col-2">
-            <Link to="/" className="navbar-logo">
+            <Link to="/hola" className="navbar-logo">
               <LogoWhite className="mx-auto" />
             </Link>
           </div>
