@@ -16,19 +16,16 @@ const Genre = () => {
         const key = "AIzaSyA_18O1wr5f_4V5Ae5451n9wU5oS_8wslI";
         const maxResults = "maxResults=9";
 
-        // Construye la URL relativa a la ruta actual
-        const currentPath = window.location.pathname;
-        const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=genre=${search}&${maxResults}&key=${key}`;
-
-        const response = await fetch(apiUrl);
+        const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=genre=romance&${maxResults}&key=${key}`);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
         const result = await response.json();
 
         setBooks(result.items);
+
       } catch (error) {
-        // Manejo de errores
+      } finally {
       }
     };
 

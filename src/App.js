@@ -11,12 +11,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const App = () => {
   return(
     <Routes>
-      <Route path="Legere" element={<Home />} />
-      <Route path="Genre" element={<Genre />} />
-      <Route path="Details" element={<Details />} />
-      <Route path="Login" element={<Login />} />
-      <Route path="Register" element={<Register />} />
-      <Route path="Profile" element={<Profile />} />
+      <Route path="/Legere" element={<Home />} />
+      <Route path="/Genre" element={<Genre />} />
+      <Route path="/Details" element={<Details />} />
+      <Route path="/Login" element={<Login />} />
+      <Route path="/Register" element={<Register />} />
+      <Route path="/Profile" element={<Profile />} />
     </Routes>
   )
 }
