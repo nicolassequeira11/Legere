@@ -8,7 +8,7 @@ const Profile = () => {
   
   const eventClick = () => {
     localStorage.removeItem("username");  
-    navigate("/Legere");
+    navigate("#/Legere");
   }
 
   return(

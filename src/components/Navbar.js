@@ -43,7 +43,7 @@ const Navbar = () => {
   // Evento click de los generos
   const eventClick = (genre) => {
     localStorage.setItem("genre", genre);
-    navigate("/Genre");
+    navigate("#/Genre");
     reload();
   }
 
@@ -54,7 +54,7 @@ const Navbar = () => {
         // Version Desktop (ancho > 1100)
         <nav className="navbar-container">
           <div className="navbar-container-logo col-2">
-            <Link to="/Legere" className="navbar-logo">
+            <Link to="#/Legere" className="navbar-logo">
               <LogoWhite className="mx-auto" />
             </Link>
           </div>
@@ -63,8 +63,8 @@ const Navbar = () => {
             <div className="d-flex col-3 justify-content-center">
                 
               {!getUsername 
-              ? (<Link to="/login" className="navbar-link">Iniciar sesión</Link>)
-              : (<Link to="/profile" className="navbar-link">{getUsername}</Link>)}
+              ? (<Link to="#/login" className="navbar-link">Iniciar sesión</Link>)
+              : (<Link to="#/profile" className="navbar-link">{getUsername}</Link>)}
 
             </div>
             <div className="col-7 d-flex">
@@ -75,7 +75,7 @@ const Navbar = () => {
 
           <div className="navbar-container-links col-2">
 
-            {!getUsername ? null : <Link to="/mislibros" className="navbar-link">Mis libros</Link>}
+            {!getUsername ? null : <Link to="#/mislibros" className="navbar-link">Mis libros</Link>}
               
             <i className="bi bi-bag navbar-cart"></i>
           </div>
@@ -88,7 +88,7 @@ const Navbar = () => {
           <div className="navbar-container-logo col-12">
 
             {/* Logo */}
-            <Link to="/Legere" className="navbar-logo col-6 col-sm-3">
+            <Link to="#/Legere" className="navbar-logo col-6 col-sm-3">
               <LogoWhite className="mx-auto col-12" />
             </Link>
 
@@ -109,8 +109,8 @@ const Navbar = () => {
             <div className="d-flex col-6 col-sm-4 justify-content-center">
 
               {!getUsername 
-              ? (<Link to="/login" className="navbar-link">Iniciar sesión</Link>)
-              : (<Link to="/profile" className="navbar-link">{getUsername}</Link>)}
+              ? (<Link to="#/login" className="navbar-link">Iniciar sesión</Link>)
+              : (<Link to="#/profile" className="navbar-link">{getUsername}</Link>)}
 
             </div>
             <div className="col-7 d-flex">
@@ -129,7 +129,7 @@ const Navbar = () => {
               {!getUsername 
                 ? null 
                 : <Link 
-                    to="/mislibros" 
+                    to="#/mislibros" 
                     className="navbar-mobile-sublink">
                   Mis libros
                   </Link>

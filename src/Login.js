@@ -36,7 +36,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   if (redirectToHome) {
-    navigate("/Legere");
+    navigate("#/Legere");
   }
 
   return(
@@ -46,12 +46,12 @@ const Login = () => {
       onSubmit={values => {
         if(values.usernameLogin === String(getUsername) && values.passwordLogin === String(getPassword)){
           setRedirectToHome(true);
-          navigate("/Legere");
+          navigate("#/Legere");
         }
       }}
     >
       <div className="login-container col-md-8 col-lg-6 col-xl-4">
-        <Link to="/Legere" className="login-container-logo">
+        <Link to="#/Legere" className="login-container-logo">
           <Logo className="col-5 d-flex m-auto" />
         </Link>
         <div className="login-container-form col-md-10">
@@ -62,7 +62,7 @@ const Login = () => {
             <TextInput name="usernameLogin" label="Usuario" type="text" />
             <TextInput name="passwordLogin" label="Contraseña" type="password" />
 
-            <Link to="/Login" className="login-text text-muted">
+            <Link to="#/Login" className="login-text text-muted">
               <p>¿Olvidaste tu contraseña?</p>
             </Link>
             <Button type="submit" color="orange" col="col-9">Iniciar sesión</Button>
@@ -70,7 +70,7 @@ const Login = () => {
             <Link className="login-text text-muted">
               <p>¿Eres nuevo?</p>
             </Link>
-            <Link to="/Register" className="text-decoration-none">
+            <Link to="#/Register" className="text-decoration-none">
               <Button color="violet" col="col-9">Crear cuenta</Button>
             </Link>
           </Form>

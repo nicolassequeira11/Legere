@@ -37,7 +37,7 @@ const Register = () => {
   const navigate = useNavigate();
 
   if(redirectToLogin){
-    navigate("/Login");
+    navigate("#/Login");
   }
 
   return (
@@ -52,7 +52,7 @@ const Register = () => {
       }}
     >
       <div className="login-container col-md-8 col-lg-6 col-xl-4">
-        <Link to="/Legere" className="login-container-logo">
+        <Link to="#/Legere" className="login-container-logo">
           <Logo className="col-5 d-flex m-auto" />
         </Link>
         <div className="login-container-form col-md-10">
@@ -65,7 +65,7 @@ const Register = () => {
             <TextInput name="password1Register" label="Contraseña" type="password" />
             <TextInput name="password2Register" label="Repetir contraseña" type="password" />
 
-            <Link to="/Login" className="login-text text-muted">
+            <Link to="#/Login" className="login-text text-muted">
               <p>¿Ya tienes una cuenta? Inicia sesión aquí</p>
             </Link>
 
