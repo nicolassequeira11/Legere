@@ -6,8 +6,8 @@ import Button from "./components/Buttons";
 import TextInput from "./components/TextInput";
 import { Logo } from "./components/Logo";
 
-const getUsername = localStorage.getItem("username").trim();
-const getPassword = localStorage.getItem("password").trim();
+const getUsername = localStorage.getItem("username");
+const getPassword = localStorage.getItem("password");
 
 const validate = (values) => {
   const errors = {};
@@ -20,11 +20,11 @@ const validate = (values) => {
     errors.passwordLogin = "Ingresa una contraseña.";
   }
 
-  if(values.usernameLogin != String(getUsername)){
+  if(values.usernameLogin != String(getUsername.trim())){
     errors.usernameLogin = "Este usuario no existe."
   }
 
-  if(values.passwordLogin != String(getPassword)){
+  if(values.passwordLogin != String(getPassword.trim())){
     errors.passwordLogin = "La contraseña es invalida."
   }
 
