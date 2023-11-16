@@ -251,18 +251,48 @@ header{
 }
 
 .login-container-form{
-  height: 60vh;
+  height: fit-content;
   margin: 0 auto;
-  border: 1px solid #3e3e3e50;
-  border-radius: 20px;
-  padding: 20px 25px;
+  border: 1px solid #dee2e6;
+  border-radius: 15px;
+  padding: 20px 25px 30px;
   text-align: center;
+}
+
+.login-title{
+  font-weight: 600;
 }
 
 .login-form{
   display: flex;
-  height: 90%;
   flex-direction: column;
+}
+
+.login-input-container{
+  position: relative;
+  margin: 5px 0;
+}
+
+.form-control:focus{
+  box-shadow: none !important;
+  border: 1px solid var(--color4) !important;
+}
+
+.login-label{
+  display: flex;
+  position: relative;
+  top: 12px;
+  left: 30px;
+  width: fit-content;
+  padding: 0 5px;
+  background-color: var(--color2);
+}
+
+.login-text{
+  text-decoration: none;
+  font-size: 0.8rem;
+  margin: 20px auto 0;
+  display: flex;
 }
 
 /* DETAILS */

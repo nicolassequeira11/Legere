@@ -1,4 +1,5 @@
 import React, { useState, useEffect} from "react";
+import BannerGenre from "./images/banner-genres.jpg";
 import Navbar from "./components/Navbar";
 import Title from "./components/Title";
 import Card from "./components/Card";
@@ -34,7 +35,10 @@ const Genre = () => {
   return (
     <div>
       <Navbar />
-
+      <div className="banner-container">
+        <img src={BannerGenre} className="col-12 object-fit-cover" height={420} />
+        <p className="banner-title">Descubre nuevos mundos</p>
+      </div>
       <Title title={genreName} />
       <div className="flex-wrap d-flex col-11 m-auto">
         {books.map(book => {

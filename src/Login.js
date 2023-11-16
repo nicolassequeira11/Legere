@@ -1,19 +1,31 @@
 import React, {useEffect, useState} from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { useFormik } from "formik";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 import Style from "./style.css"
 import Button from "./components/Buttons";
+import TextInput from "./components/TextInput";
 import { Logo } from "./components/Logo";
+
+const getUsername = localStorage.getItem("username");
+const getPassword = localStorage.getItem("password");
 
 const validate = (values) => {
   const errors = {};
 
-  if(!values.username) {
-    errors.username = "Requerido";
+  if(!values.usernameLogin) {
+    errors.usernameLogin = "Ingresa un usuario.";
   }
 
-  if(!values.password) {
-    errors.password = "Requerido";
+  if(!values.passwordLogin) {
+    errors.passwordLogin = "Ingresa una contraseña.";
+  }
+
+  if(values.usernameLogin !== String(getUsername)){
+    errors.usernameLogin = "Este usuario no existe."
+  }
+
+  if(values.passwordLogin !== String(getPassword)){
+    errors.passwordLogin = "La contraseña es invalida."
   }
 
   return errors;
@@ -23,61 +35,49 @@ const Login = () => {
   const [redirectToHome, setRedirectToHome] = useState(false);
   const navigate = useNavigate();
 
-  const formik = useFormik({
-    initialValues: {
-      username: "",
-      password: "",
-    },
-    onSubmit: values => {
-      localStorage.setItem("username", values.username);
-      setRedirectToHome(true);
-    }
-  });
-
   if (redirectToHome) {
     navigate("/Legere");
   }
 
   return(
-    <div className="login-container col-md-8 col-lg-6 col-xl-4">
-      <Link to="/Legere" className="login-container-logo">
-        <Logo className="col-5 d-flex m-auto" />
-      </Link>
-      <div className="login-container-form col-md-10">
-        <h3>Iniciar sesión</h3>
-        <form onSubmit={formik.handleSubmit} className="login-form">
-          <input 
-            type="text" 
-            className="form-control col-10 m-auto" 
-            placeholder="Nombre de usuario"
-            {...formik.getFieldProps("username")} />
-              {formik.touched.username && formik.errors.username ?
-              <div>{formik.errors.username}</div> : null}
+    <Formik
+      initialValues={{ usernameLogin: "", passwordLogin: "" }}
+      validate={validate}
+      onSubmit={values => {
+        if(values.usernameLogin === String(getUsername) && values.passwordLogin === String(getPassword)){
+          setRedirectToHome(true);
+          navigate("/Legere");
+        }
+      }}
+    >
+      <div className="login-container col-md-8 col-lg-6 col-xl-4">
+        <Link to="/Legere" className="login-container-logo">
+          <Logo className="col-5 d-flex m-auto" />
+        </Link>
+        <div className="login-container-form col-md-10">
+          <h3 className="login-title">Iniciar sesión</h3>
 
-          <input 
-            type="password" 
-            className="form-control col-10 m-auto" 
-            placeholder="Contraseña"
-            {...formik.getFieldProps("password")} />
-              {formik.touched.password && formik.errors.password ?
-              <div>{formik.errors.password}</div> : null}
+          <Form className="login-form">
+            
+            <TextInput name="usernameLogin" label="Usuario" type="text" />
+            <TextInput name="passwordLogin" label="Contraseña" type="password" />
 
-          <a 
-            href="#" 
-            className="text-decoration-none text-dark">
-              ¿Olvidaste tu contraseña?
-          </a>
-          <Button color="orange" col="col-9">Iniciar sesión</Button>
+            <Link to="/Login" className="login-text text-muted">
+              <p>¿Olvidaste tu contraseña?</p>
+            </Link>
+            <Button type="submit" color="orange" col="col-9">Iniciar sesión</Button>
 
-          <a 
-            href="#" 
-            className="text-decoration-none text-dark">
-              ¿Eres nuevo?
-          </a>
-          <Button color="violet" col="col-9">Crear cuenta</Button>
-        </form>
+            <Link className="login-text text-muted">
+              <p>¿Eres nuevo?</p>
+            </Link>
+            <Link to="/Register" className="text-decoration-none">
+              <Button color="violet" col="col-9">Crear cuenta</Button>
+            </Link>
+          </Form>
+
+        </div>
       </div>
-    </div>
+    </Formik>
   );
 };
 
