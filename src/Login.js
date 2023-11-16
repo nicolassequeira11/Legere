@@ -6,8 +6,8 @@ import Button from "./components/Buttons";
 import TextInput from "./components/TextInput";
 import { Logo } from "./components/Logo";
 
-const getUsername = localStorage.getItem("username");
-const getPassword = localStorage.getItem("password");
+const getUsername = localStorage.getItem("username").trim();
+const getPassword = localStorage.getItem("password").trim();
 
 const validate = (values) => {
   const errors = {};
