@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Legere/static/css/main.0fa4be63.css",
-    "main.js": "/Legere/static/js/main.2a72bf5c.js",
+    "main.js": "/Legere/static/js/main.0d0fdf49.js",
     "static/media/banner-genres.jpg": "/Legere/static/media/banner-genres.f57be5e91c5247f7797a.jpg",
     "static/media/banner-home.png": "/Legere/static/media/banner-home.e13f32b0b361e8767b21.png",
     "static/media/bootstrap-icons.woff?": "/Legere/static/media/bootstrap-icons.449ad8adf6ae0424b7ed.woff",
@@ -10,10 +10,10 @@
     "static/media/logo-white.png": "/Legere/static/media/logo-white.96d1e90bf7696a26dbbb.png",
     "index.html": "/Legere/index.html",
     "main.0fa4be63.css.map": "/Legere/static/css/main.0fa4be63.css.map",
-    "main.2a72bf5c.js.map": "/Legere/static/js/main.2a72bf5c.js.map"
+    "main.0d0fdf49.js.map": "/Legere/static/js/main.0d0fdf49.js.map"
   },
   "entrypoints": [
     "static/css/main.0fa4be63.css",
-    "static/js/main.2a72bf5c.js"
+    "static/js/main.0d0fdf49.js"
   ]
 }
