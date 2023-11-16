@@ -1,4 +1,5 @@
 import React, { useState, useEffect} from "react";
+import { useNavigate } from "react-router-dom";
 import BannerGenre from "./images/banner-genres.jpg";
 import Navbar from "./components/Navbar";
 import Title from "./components/Title";
@@ -8,6 +9,13 @@ const Genre = () => {
   const [query, setQuery] = useState('');
   const [books, setBooks] = useState([]);
   const genreName = localStorage.getItem("genre");
+
+  const navigate = useNavigate();
+
+  const clickDetails = (id) => {
+    localStorage.setItem("bookID", id);
+    navigate("/Details");
+  }
 
   useEffect(() => {
     const fetchData = async () => {
@@ -54,6 +62,7 @@ const Genre = () => {
                 title={book.volumeInfo.title} 
                 author={book.volumeInfo.authors}
                 price={book.saleInfo.listPrice.amount + " " + book.saleInfo.listPrice.currencyCode} 
+                onClick={()=> clickDetails(book.id)}
               />
             )
           }
