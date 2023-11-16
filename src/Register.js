@@ -52,7 +52,7 @@ const Register = () => {
       }}
     >
       <div className="login-container col-md-8 col-lg-6 col-xl-4">
-        <Link to="/Legere" className="login-container-logo">
+        <Link to="/" className="login-container-logo">
           <Logo className="col-5 d-flex m-auto" />
         </Link>
         <div className="login-container-form col-md-10">

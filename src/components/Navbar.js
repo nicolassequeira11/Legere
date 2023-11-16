@@ -54,7 +54,7 @@ const Navbar = () => {
         // Version Desktop (ancho > 1100)
         <nav className="navbar-container">
           <div className="navbar-container-logo col-2">
-            <Link to="/Legere" className="navbar-logo">
+            <Link to="/" className="navbar-logo">
               <LogoWhite className="mx-auto" />
             </Link>
           </div>
@@ -88,7 +88,7 @@ const Navbar = () => {
           <div className="navbar-container-logo col-12">
 
             {/* Logo */}
-            <Link to="/Legere" className="navbar-logo col-6 col-sm-3">
+            <Link to="/" className="navbar-logo col-6 col-sm-3">
               <LogoWhite className="mx-auto col-12" />
             </Link>
 
