@@ -12,11 +12,11 @@ const Genre = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const search = "genre=${+" + genreName + "}";
+        const search = genreName;
         const key = "AIzaSyA_18O1wr5f_4V5Ae5451n9wU5oS_8wslI";
         const maxResults = "maxResults=9";
 
-        const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=` + search + `&` + maxResults + `&key=` + key);
+        const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=genre=$` + search + `&` + maxResults + `&key=` + key);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }

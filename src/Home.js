@@ -12,7 +12,7 @@ const Home = () => {
 
   const clickDetails = (id) => {
     localStorage.setItem("bookID", id);
-    navigate("#/Details");
+    navigate("/Details");
   }
 
   useEffect(() => {
