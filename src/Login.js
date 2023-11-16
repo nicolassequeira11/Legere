@@ -20,11 +20,11 @@ const validate = (values) => {
     errors.passwordLogin = "Ingresa una contraseña.";
   }
 
-  if(values.usernameLogin !== String(getUsername)){
+  if(values.usernameLogin != String(getUsername)){
     errors.usernameLogin = "Este usuario no existe."
   }
 
-  if(values.passwordLogin !== String(getPassword)){
+  if(values.passwordLogin != String(getPassword)){
     errors.passwordLogin = "La contraseña es invalida."
   }
 
