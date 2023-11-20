@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Button from "./components/Buttons";
+import Footer from "./components/Footer";
 
 const Profile = () => {
   const navigate = useNavigate();
@@ -22,6 +23,7 @@ const Profile = () => {
           Cerrar sesión
         </Button>
       </div>
+      <Footer />
     </div>
   )
 }

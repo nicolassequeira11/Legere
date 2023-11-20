@@ -4,6 +4,7 @@ import BannerGenre from "./images/banner-genres.jpg";
 import Navbar from "./components/Navbar";
 import Title from "./components/Title";
 import Card from "./components/Card";
+import Footer from "./components/Footer";
 
 const Genre = () => {
   const [query, setQuery] = useState('');
@@ -48,7 +49,7 @@ const Genre = () => {
         <p className="banner-title">Descubre nuevos mundos</p>
       </div>
       <Title title={genreName} />
-      <div className="flex-wrap d-flex col-11 m-auto">
+      <div className="flex-wrap d-flex col-12 col-md-11 m-auto">
         {books.map(book => {
           let thumbnail = book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail;
           let amount = book.saleInfo.listPrice && book.saleInfo.listPrice.amount;
@@ -68,6 +69,7 @@ const Genre = () => {
           }
         })}
       </div>
+      <Footer />
     </div>
   )
 }

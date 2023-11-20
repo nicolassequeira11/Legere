@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import Style from "./style.css"
 import Button from "./components/Buttons";
 import TextInput from "./components/TextInput";
 import { Logo } from "./components/Logo";

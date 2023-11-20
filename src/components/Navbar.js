@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import Style from "../style.css";
 import { LogoWhite } from "./Logo";
 
 const Navbar = () => {
@@ -54,7 +53,7 @@ const Navbar = () => {
         // Version Desktop (ancho > 1100)
         <nav className="navbar-container">
           <div className="navbar-container-logo col-2">
-            <Link to="/hola" className="navbar-logo">
+            <Link to="/" className="navbar-logo">
               <LogoWhite className="mx-auto" />
             </Link>
           </div>
@@ -68,7 +67,7 @@ const Navbar = () => {
 
             </div>
             <div className="col-7 d-flex">
-              <input className="navbar-inputSearch" type="search"></input>
+              <input className="navbar-inputSearch" placeholder="Buscar en Legere" type="search"></input>
               <i className="bi bi-search navbar-inputSearch-icon"></i>
             </div>
           </div>

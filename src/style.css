@@ -217,7 +217,29 @@ header{
 
 /* --- card --- */
 
-.card-container{
+.card-info-container{
+  text-align: center;
+}
+
+.card-img{
+  display: flex;
+  margin: auto;
+  object-fit: contain;
+  height: 330px;
+}
+
+.card-title{
+  margin: 5px auto;
+}
+
+.card-author{
+  margin: 5px auto;
+}
+
+.card-price{
+  font-weight: 700;
+  margin: 15px auto 10px;
+  font-size: 1.3rem;
 }
 
 /* --- title --- */
@@ -232,6 +254,27 @@ header{
   display: flex;
   width: 53vw;
   background-color: var(--color4);
+}
+
+/* --- footer --- */
+
+.footer-container{
+  background-color: var(--color1);
+}
+
+.footer-links-container{
+  margin: auto;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-links{
+  text-decoration: none;
+  color: var(--color2);
+  margin: 0.5rem 20px;
+  font-weight: 300;
+  text-align: center;
 }
 
 /* LOGIN */

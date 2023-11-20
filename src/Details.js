@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Button from "./components/Buttons";
+import Footer from "./components/Footer";
 
 const Details = () => {
   const [book, setBook] = useState([]);
@@ -54,6 +55,7 @@ const Details = () => {
         </div>
       </div>
       ) : null}
+      <Footer />
     </div>
   )
 }

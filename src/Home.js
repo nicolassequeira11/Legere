@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Banner from "./images/banner-home.png";
 import Card from "./components/Card";
 import Title from "./components/Title";
+import Footer from "./components/Footer";
 
 const Home = () => {
   const [query, setQuery] = useState('');
@@ -44,7 +45,7 @@ const Home = () => {
       <div>
         <img src={Banner} className="col-12" height={420}/>
       </div>
-      <Title title="Libros populares ahora" />
+      <Title title="Libros populares" />
       <div className="flex-wrap d-flex col-11 m-auto">
         {books.map(book => {
           let thumbnail = book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail;
@@ -65,6 +66,7 @@ const Home = () => {
           }
         })}
       </div>
+      <Footer />
     </div>
   );
 };

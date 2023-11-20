@@ -13,14 +13,14 @@ const Card = ({ title: originalTitle, img, price, author, onClick }) => {
   
   return(
     <div className="card-container col-12 col-sm-6 col-lg-4 col-xl-3">
-      <div className="col-12 col-12">
-        <img src={`${img}`} className="d-flex m-auto col-8 object-fit-cover rounded-3" height={330} />
+      <div>
+        <img src={`${img}`} className="card-img rounded-3" />
       </div>
-      <div className="mt-3 mb-5">
-        <h6 className="text-center col-8 mx-auto my-0">{newTitle}</h6>
-        <p className="text-muted m-auto text-center"><small>{author}</small></p>
-        <p className="text-center col-8 mx-auto">{price}</p>
-        <Button color="orange" onClick={onClick} col="col-7">Ver detalle</Button>
+      <div className="card-info-container mt-3 mb-5">
+        <h6 className="card-title col-8 my-0">{newTitle}</h6>
+        <p className="card-author text-muted"><small>{author}</small></p>
+        <p className="card-price col-8">{price}</p>
+        <Button color="orange" onClick={onClick} col="col-8">Ver detalle</Button>
       </div>
     </div>
   )
