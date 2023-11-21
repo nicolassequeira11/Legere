@@ -45,11 +45,11 @@ const Genre = () => {
     <div>
       <Navbar />
       <div className="banner-container">
-        <img src={BannerGenre} className="col-12 object-fit-cover" height={420} />
-        <p className="banner-title">Descubre nuevos mundos</p>
+        <img src={BannerGenre} className="col-12 object-fit-cover show" height={420} />
+        <p className="banner-title show">Descubre nuevos mundos</p>
       </div>
       <Title title={genreName} />
-      <div className="flex-wrap d-flex col-12 col-md-11 m-auto">
+      <div className="flex-wrap d-flex col-12 col-md-11 m-auto show">
         {books.map(book => {
           let thumbnail = book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail;
           let amount = book.saleInfo.listPrice && book.saleInfo.listPrice.amount;

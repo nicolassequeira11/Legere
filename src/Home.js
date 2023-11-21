@@ -61,12 +61,12 @@ const Home = () => {
       <Navbar />
       <div>
         {anchoPantalla > 700
-        ? (<img src={Banner} className="col-12 object-fit-contain" />) 
-        : (<img src={BannerMobile} className="col-12 object-fit-cover" />)
+        ? (<img src={Banner} className="show col-12 object-fit-contain" />) 
+        : (<img src={BannerMobile} className="show col-12 object-fit-cover" />)
         }
       </div>
       <Title title="Libros populares" />
-      <div className="flex-wrap d-flex col-11 m-auto">
+      <div className="flex-wrap d-flex col-11 m-auto show">
         {books.map(book => {
           let thumbnail = book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail;
           let amount = book.saleInfo.listPrice && book.saleInfo.listPrice.amount;

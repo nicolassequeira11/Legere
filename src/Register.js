@@ -50,7 +50,7 @@ const Register = () => {
         setRedirectToLogin(true);
       }}
     >
-      <div className="login-container col-md-8 col-lg-6 col-xl-4">
+      <div className="login-container col-md-8 col-lg-6 col-xl-4 show">
         <Link to="/" className="login-container-logo">
           <Logo className="col-5 d-flex m-auto" />
         </Link>

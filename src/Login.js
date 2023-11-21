@@ -5,8 +5,8 @@ import Button from "./components/Buttons";
 import TextInput from "./components/TextInput";
 import { Logo } from "./components/Logo";
 
-const getUsername = localStorage.getItem("username");
-const getPassword = localStorage.getItem("password");
+const getUsername = localStorage.getItem("username") || "";
+const getPassword = localStorage.getItem("password") || "";
 
 const validate = (values) => {
   const errors = {};
@@ -49,7 +49,7 @@ const Login = () => {
         }
       }}
     >
-      <div className="login-container col-md-8 col-lg-6 col-xl-4">
+      <div className="login-container col-md-8 col-lg-6 col-xl-4 show">
         <Link to="/" className="login-container-logo">
           <Logo className="col-5 d-flex m-auto" />
         </Link>
