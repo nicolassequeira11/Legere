@@ -195,7 +195,7 @@ const Navbar = () => {
 
           <Link className="navbar-sublink" onClick={toggleGenres}>
             Géneros
-            <i className="bi bi-chevron-down text-white ms-2 my-auto"></i>
+            <i class="fa-solid fa-chevron-down text-white ms-1"></i>
           </Link>
 
           {showGenres && (

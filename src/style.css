@@ -5,6 +5,7 @@
   --color4: #ffb500;
   --color5: #d9d9d9;
   --color6: #000000;
+  --color7: #eae9f9;
 }
 
 * {
@@ -134,7 +135,7 @@ header{
   color: var(--color2);
   font-weight: 600;
   margin: 0 0 0 3.5rem;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 .navbar-sublink:hover{
@@ -406,6 +407,80 @@ header{
   margin: auto;
 }
 
-.error404-img{
+/* PROFILE */
 
+.profile-info-container{
+  background-color: var(--color7);
+  font-weight: 600;
+  padding: 1rem 0;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-user-container{
+  display: flex;
+  margin: 1rem 2rem 1rem;
+}
+
+.profile-user{
+  margin: auto 1rem;
+  font-size: 1.4rem;
+}
+
+.profile-user-icon{
+  margin: auto 0;
+  color: var(--color1);
+}
+
+.profile-links-container{
+  display: flex;
+  margin: 0.5rem 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.profile-links{
+  margin: 0.8rem 0;
+}
+
+.profile-links-icon{
+  margin: auto 1rem;
+  color: var(--color3);
+}
+
+.profile-profileField-container{
+  margin: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-inputs-container{
+  margin: 1rem auto;
+}
+
+.profile-input{
+  margin: 1.5rem auto;
+}
+
+.profile-button-container{
+  margin: 0 auto;
+}
+
+.profile-ham-mobile{
+  position: absolute;
+  right: 0;
+  color: var(--color1);
+  padding: 0.5rem;
+  z-index: 100;
+  font-size: 1.2rem;
+}
+
+.profile-info-container-mobile{
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--color7);
 }

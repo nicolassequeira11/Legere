@@ -1,7 +1,8 @@
 import React, { useState, useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Banner from "./images/banner-home.png";
+import Banner from "./images/banner-home.jpg";
+import BannerMobile from "./images/banner-home-mobile.jpg";
 import Card from "./components/Card";
 import Title from "./components/Title";
 import Footer from "./components/Footer";
@@ -10,6 +11,22 @@ const Home = () => {
   const [query, setQuery] = useState('');
   const [books, setBooks] = useState([]);
   const navigate = useNavigate();
+  const [anchoPantalla, setAnchoPantalla] = useState(window.innerWidth);
+
+  useEffect(() => {
+    // Función para actualizar el estado del ancho de la pantalla cuando cambie el tamaño de la ventana
+    const actualizarAnchoVentana = () => {
+      setAnchoPantalla(window.innerWidth);
+    };
+
+    // Agregar un listener de evento para manejar cambios en el tamaño de la ventana
+    window.addEventListener("resize", actualizarAnchoVentana);
+
+    // Remover el listener cuando el componente se desmonta
+    return () => {
+      window.removeEventListener("resize", actualizarAnchoVentana);
+    };
+  }, []);
 
   const clickDetails = (id) => {
     localStorage.setItem("bookID", id);
@@ -43,7 +60,10 @@ const Home = () => {
     <div>
       <Navbar />
       <div>
-        <img src={Banner} className="col-12" height={420}/>
+        {anchoPantalla > 700
+        ? (<img src={Banner} className="col-12 object-fit-contain" />) 
+        : (<img src={BannerMobile} className="col-12 object-fit-cover" />)
+        }
       </div>
       <Title title="Libros populares" />
       <div className="flex-wrap d-flex col-11 m-auto">
